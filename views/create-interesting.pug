@@ -1,0 +1,23 @@
+extends layout
+
+block content 
+    include includes/errors
+    form(action="/create-interesting" method="post")
+        include includes/form-inputs
+        label Age 
+            input(type="number" name="age" value=ageVal)
+        label Favorite Beatle
+            select(name="favBeatle") 
+                option(value="" ) Pick a Beatle 👇🏼
+                option(value="John" johnSelected) John
+                option(value="Ringo" ringoSelected) Ringo
+                option(value="Paul" paulSelected) Paul
+                option(value="George" georgeSelected) George
+        div Likes Icecream
+            label
+                input(type="radio" name="likesIcecream" value="yes") 
+                span Yes
+            label
+                input(type="radio" name="likesIcecream" value="no") 
+                span No
+        input(type="submit" value="Create User") 

@@ -1,0 +1,24 @@
+extends layout
+
+block content 
+    include includes/errors
+    form(action="/create" method="post")
+        include includes/form-inputs
+        input(type="submit" value="Create User") 
+        //- label Favorite Beatle
+        //-     select 
+        //-         option John
+        //-         option Ringo
+        //-         option Paul
+        //-         option George
+        //- div Likes Icecream
+        //-     label
+        //-         input(type="radio" name="likesIcecream" value="yes") 
+        //-         span Yes
+        //-     label
+        //-         input(type="radio" name="likesIcecream" value="no") 
+        //-         span No
+            
+
+
+//- more abt mixins https://pugjs.org/language/mixins.html

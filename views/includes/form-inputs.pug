@@ -1,0 +1,10 @@
+mixin formElement(labelText, type, name, value)
+    label=labelText 
+        input(type=type name=name value=value)
+
+input(type="hidden" name="_csrf" value=csrfToken)
++formElement("First Name", "text", "firstName", fnVal)
++formElement("Last Name", "text", "lastName", lnVal)
++formElement("Email", "email", "email", emailVal)
++formElement("Password", "password", "password")
++formElement("Confirm Password", "password", "confirmedPassword")
